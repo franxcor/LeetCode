@@ -1,0 +1,15 @@
+//Two Sum, Level: Easy, Beats: 5.00%
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        i = 0
+        j = i+1
+        final = []
+        while (i < len(nums)) :
+            while (j < len(nums)) :
+                if nums[i] + nums[j] == target :
+                     final.append(i)
+                     final.append(j)
+                     return final
+                j += 1
+            i += 1
+            j = i+1
