@@ -1,0 +1,11 @@
+//Remove Duplicates from Sorted Array, Level: Easy, Runtime Beats: 87.63%, Memory Beats: 6.24%, Language: C
+int removeDuplicates(int* nums, int numsSize){
+    int count = 1;
+    for (int i = 1; i < numsSize; i++) {
+        if (nums[i] != nums[count-1]) {
+            nums[count] = nums[i];
+            count += 1;
+        }
+    }
+    return count;
+}
