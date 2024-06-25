@@ -1,4 +1,4 @@
-//Two Sum, Level: Easy, Beats: 5.00%
+//Two Sum, Level: Easy, Runtime Beats: 5.00%, Memory Beats: 99.84%, Language: Python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         i = 0
