@@ -1,0 +1,16 @@
+//Palindrome Number, Level: Easy, Runtime Beats: 5.13%, Memory Beats: 99.94%, Language: Python
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0 : 
+            return False
+        stringCpy = str(x)
+        final = []
+        finStr = ""
+        for i in stringCpy :
+            final.insert(0, i)
+        for i in final:
+            finStr += i
+        if finStr == stringCpy :
+            return True
+        else :
+            return False
