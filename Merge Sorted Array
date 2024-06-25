@@ -1,0 +1,22 @@
+Merge Sorted Array, Level: Easy, Runtime Beats: 88.96%, Memory Beats: 92.97%, Language: Python
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        nums1Copy = nums1[:m]
+        nums1[:] = []
+        nums1Place = 0
+        nums2Place = 0
+        curPlace = 0
+        while (nums1Place < m and nums2Place < n) :
+            if nums1Copy[nums1Place] <= nums2[nums2Place] :
+                nums1.append(nums1Copy[nums1Place])
+                nums1Place += 1
+            elif (nums1Copy[nums1Place] > nums2[nums2Place]) :
+                nums1.append(nums2[nums2Place])
+                nums2Place += 1
+        while (nums1Place < m) :
+            nums1.append(nums1Copy[nums1Place])
+            nums1Place += 1
+        while (nums2Place < n) :
+            print(nums2[nums2Place])
+            nums1.append(nums2[nums2Place])
+            nums2Place += 1
